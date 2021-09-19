@@ -1,0 +1,142 @@
+/* colors */
+:root{
+	--banner_background: #2f3a39ff;
+	--banner_font: #91a5a2ff;
+	--navbar_background: #566563ff;
+	--navbar_font: #2f3a39ff;
+
+	--highlight: whitesmoke;
+
+	--sections_background1: #7d908dff;
+	--sections_background2: #566563ff;
+	--sections-text: rgb(179, 211, 205);
+}
+
+/* make the screen whole */
+html, body, .container-fluid{
+  	height: 100%;
+	padding: 0;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+h1,h2,p {
+	margin: 0;
+}
+
+h1{
+	font-size: 330%;
+}
+
+h2{
+	font-size: 140%;
+}
+
+p{
+	font-size: 110%;
+}
+
+ul, li{
+	padding: 0;
+}
+
+.row, .col {
+	margin: 0;
+	padding: 0;
+}
+
+.banner-title{
+	font-family: 'Lato';
+	font-weight: 100;
+	color: var(--banner_font);
+}
+
+p.banner-title{
+	font-weight: 300;
+}
+
+.banner {
+	background-color: var(--banner_background);
+	padding: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav {
+	background-color: var(--navbar_background);
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.nav-item a{
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 1px;
+	border-bottom: 1px solid var(--navbar_font);
+	text-decoration: unset;
+}
+
+.nav-item a:hover {
+	color: var(--highlight);
+	border-color: var(--highlight);
+}
+
+.navbar-text{
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	color: var(--navbar_font);
+	margin: 0;
+}
+
+.social a{
+	position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 1px solid var(--banner_font);
+    color: var(--banner_font);
+	text-align: center;
+}
+
+.social a:hover{
+	border-bottom: 1px solid var(--highlight);
+	color: var(--highlight);
+}
+
+.social li {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.social ul{
+	margin: 0;
+	margin-top: 15px;
+	display: inline-flex;
+	list-style-type: none;
+}
+
+.sections {
+	background-color: var(--sections_background1);
+}
+
+.sections-alt {
+	background-color: var(--sections_background2);
+}
+
+.sections h2{
+	margin-top: 2%;
+	text-align: center;
+	color: var(--sections-text);
+	
+	font-family: 300 13px/20px 'Open Sans',sans-serif;
+	font-weight: 300;
+}
