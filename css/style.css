@@ -1,15 +1,29 @@
 /* colors */
 :root{
-	--banner_background: #2f3a39ff;
-	--banner_font: #91a5a2ff;
-	--navbar_background: #566563ff;
-	--navbar_font: #2f3a39ff;
+	--banner-background: #2f3a39ff;
+	--banner-font: #91a5a2ff;
+	--navbar-background: #566563ff;
+	--navbar-font: #2f3a39ff;
 
 	--highlight: whitesmoke;
 
-	--sections_background1: #7d908dff;
-	--sections_background2: #566563ff;
-	--sections-text: rgb(179, 211, 205);
+	--sections-background1: #7d908dff;
+	--sections-background2: #566563ff;
+	--sections-text: rgb(202, 226, 222);
+	
+	--blog-banner-background: #7d908dff;
+	--blog-banner-text: rgb(179, 211, 205);
+
+	--blog-posts-background: rgb(230, 238, 236);
+	--blog-posts-text: #7d908dff;
+	--blog-posts-href-text: rgb(81, 90, 90);
+	--blog-posts-highlight-text: rgb(158, 199, 193);
+	--blog-sidebar-background: rgb(214, 230, 226);
+	
+	--post-background: rgb(230, 238, 236);
+	--post-text: #7d908dff;
+	--post-href-text: rgb(81, 90, 90);
+	--post-highlight-text: rgb(158, 199, 193);
 }
 
 /* make the screen whole */
@@ -50,7 +64,7 @@ ul, li{
 .banner-title{
 	font-family: 'Lato';
 	font-weight: 100;
-	color: var(--banner_font);
+	color: var(--banner-font);
 }
 
 p.banner-title{
@@ -58,7 +72,7 @@ p.banner-title{
 }
 
 .banner {
-	background-color: var(--banner_background);
+	background-color: var(--banner-background);
 	padding: 0;
 
 	display: flex;
@@ -67,7 +81,7 @@ p.banner-title{
 }
 
 .nav {
-	background-color: var(--navbar_background);
+	background-color: var(--navbar-background);
 	padding-top: 1px;
 	padding-bottom: 1px;
 	padding-left: 2%;
@@ -80,7 +94,7 @@ p.banner-title{
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 1px;
-	border-bottom: 1px solid var(--navbar_font);
+	border-bottom: 1px solid var(--navbar-font);
 	text-decoration: unset;
 }
 
@@ -93,7 +107,7 @@ p.banner-title{
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
-	color: var(--navbar_font);
+	color: var(--navbar-font);
 	margin: 0;
 }
 
@@ -102,8 +116,8 @@ p.banner-title{
     display: block;
     width: 30px;
     height: 30px;
-    border-bottom: 1px solid var(--banner_font);
-    color: var(--banner_font);
+    border-bottom: 1px solid var(--banner-font);
+    color: var(--banner-font);
 	text-align: center;
 }
 
@@ -125,11 +139,11 @@ p.banner-title{
 }
 
 .sections {
-	background-color: var(--sections_background1);
+	background-color: var(--sections-background1);
 }
 
 .sections-alt {
-	background-color: var(--sections_background2);
+	background-color: var(--sections-background2);
 }
 
 .sections h2{
@@ -139,4 +153,97 @@ p.banner-title{
 	
 	font-family: 300 13px/20px 'Open Sans',sans-serif;
 	font-weight: 300;
+}
+
+.default-banner {
+	background-color: var(--blog-banner-background);
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.default-banner h1{
+	color: var(--blog-banner-text);
+	font-family: 'Lato';
+	font-weight: 100;
+	font-size: 300%;
+
+	word-wrap: break-word;
+
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.blog-posts{
+	background-color: var(--blog-posts-background);
+	padding: 15px;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.blog-sidebar{
+	background-color: var(--blog-sidebar-background);
+	padding: 15px;
+	padding-left: 20px;
+}
+
+.myposts{
+	list-style: none;
+	color: var(--blog-posts-text);
+	font-family: 300 13px/20px 'Open Sans',sans-serif;
+	font-weight: 400;
+	font-size: 17px;
+}
+
+.myposts li{
+	padding-bottom: 25px;
+}
+
+.myposts a{
+	text-decoration: none;
+	color: var(--blog-posts-href-text);
+}
+
+.myposts a:hover{
+	color: var(--blog-posts-highlight-text);
+}
+
+.myposts p{
+	font-size: 14px;
+}
+
+
+.post{
+	background-color: var(--post-background);
+	padding: 22px;
+
+	color: var(--post-text);
+	font-family: 300 13px/20px 'Open Sans',sans-serif;
+	font-weight: 400;
+	font-size: 17px;
+}
+
+.post h2{
+	padding: 5px;
+	
+	color: var(--post-text);
+	font-family: 300 13px/20px 'Open Sans',sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.post h3{
+	padding: 5px;
+	
+	color: var(--post-text);
+	font-family: 300 13px/20px 'Open Sans',sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+.post a{
+	color: var(--post-href-text);
+}
+
+.post a:hover{
+	color: var(--post-highlight-text);
 }

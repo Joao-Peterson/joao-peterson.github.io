@@ -23,20 +23,35 @@
 </head>
 <body>
     <div class="container-fluid">
-
-        <nav id="main-nav" class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="navbar-link navbar-text" href="#">
-                    Portifólio
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="navbar-link navbar-text" href="#">
-                    Blog
-                </a>
-            </li>
-        </nav>
         
+        <!-- navbar -->
+        <div class="row">
+            <div class="col">
+                <nav id="main-nav" class="nav justify-content-start">
+                    <li class="nav-item">
+                        <a class="navbar-link navbar-text" href="#/">
+                            Home
+                        </a>                
+                    </li>
+                </nav>
+            </div>
+            <div class="col">
+                <nav id="main-nav" class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="navbar-link navbar-text" href="#projetos">
+                            Portifólio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-link navbar-text" href="/blog">
+                            Blog
+                        </a>
+                    </li>
+                </nav>
+            </div>
+        </div>
+        
+        <!-- banner, social and title -->
         <div class="row banner" style="height: 60vh;">
             <div>
                 <h1 class="text-center text-uppercase banner-title">
@@ -58,17 +73,20 @@
                         <li><a href="https://linkedin.com/in/peterson-scheffer" ><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="https://youtube.com/channel/UCCnexeRhsuk1B9tz2kjsrAg" ><i class="fa fa-youtube"></i></a></li>
                         <li><a href="https://instagram.com/joao_bem_legal/" ><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="/feed.xml" ><i class="fa fa-feed"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="row">
+        <!-- present media -->
+        <div id="projetos" class="row">
             <div class="container-fluid sections " style="height: auto;">
                 <h2>Projetos</h2>
             </div>
         </div>
-
+        
+        <!-- present media, alt background color -->
         <div class="row">
             <div class="container-fluid sections sections-alt" style="height: auto;">
                 <h2>Ultimos posts do Blog</h2>
