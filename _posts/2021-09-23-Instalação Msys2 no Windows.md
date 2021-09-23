@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Instalação Msys2 no Window"
+title:  "Instalação Msys2 no Windows"
 author: Peterson
 date:   2021-09-23 19:00:00 -0300
 categories: [tutoriais, C]
@@ -11,6 +11,6 @@ Olá, trago a vocês um vídeo que gravei para youtube de como fazer a instalaç
 
 Espero que este seja o primeiro de série de vídeos e posts sobre programação em C.
 
-<div style="margin: 30px">
+<div style="margin: 40px">
 <iframe  width="560" height="315" src="https://www.youtube.com/embed/wvETU3rHp5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
