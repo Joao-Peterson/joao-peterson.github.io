@@ -3,7 +3,8 @@
 	--banner-background: #2f3a39ff;
 	--banner-font: #91a5a2ff;
 	--navbar-background: #566563ff;
-	--navbar-font: #2f3a39ff;
+	/* --navbar-font: #2f3a39ff; */
+	--navbar-font: rgb(160, 182, 178);
 
 	--highlight: whitesmoke;
 
@@ -83,7 +84,7 @@ p.banner-title{
 .nav {
 	background-color: var(--navbar-background);
 	padding-top: 1px;
-	padding-bottom: 1px;
+	padding-bottom: 5px;
 	padding-left: 2%;
 	padding-right: 2%;
 }
