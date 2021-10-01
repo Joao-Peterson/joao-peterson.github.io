@@ -8,11 +8,12 @@
     <meta name="description" content="Personal site for me :)">
     
     <link  href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link  href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="jquery/jquery-3.2.1.slim.min.js" defer></script>
     <script src="popperjs/popper.min.js" defer></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     
     <link href="fonts/open-sans.css" rel="stylesheet" type="text/css">
     <link href="fonts/lato.css" type="text/css" rel="stylesheet">
@@ -37,11 +38,11 @@
             </div>
             <div class="col">
                 <nav id="main-nav" class="nav justify-content-end">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="navbar-link navbar-text" href="#projetos">
                             Portifólio
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="navbar-link navbar-text" href="/blog">
                             Blog
@@ -52,13 +53,13 @@
         </div>
         
         <!-- banner, social and title -->
-        <div class="row banner" style="height: 60vh;">
+        <div class="row banner">
             <div>
                 <h1 class="text-center text-uppercase banner-title">
                     João <br> Peterson
                 </h1>
                 <p class="text-center banner-title">
-                    Programação & Eletrônica
+                    Programmer and tech enthusiast
                 </p>
             </div>
 
@@ -81,15 +82,60 @@
 
         <!-- present media -->
         <div id="projetos" class="row">
-            <div class="container-fluid sections " style="height: auto;">
-                <h2>Projetos</h2>
+            <div class="container-fluid sections">
+
+                <h2>Recent videos</h2>
+                
+                <div id="projetos-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active text-center">
+                            <div class="d-block w-100">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/8VHXpFbpFm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item text-center">
+                            <div class="d-block w-100">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/rmnxIKQpHfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-prev" data-bs-target="#projetos-carousel" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <!-- <span class="sr-only">Previosu</span> -->
+                        </a>
+                        <a class="carousel-control-next" data-bs-target="#projetos-carousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <!-- <span class="sr-only">Next</span> -->
+                        </a>
+
+                    </div>
+                </div>
+
             </div>
         </div>
         
         <!-- present media, alt background color -->
         <div class="row">
-            <div class="container-fluid sections sections-alt" style="height: auto;">
-                <h2>Ultimos posts do Blog</h2>
+            <div class="container-fluid sections sections-alt">
+                <h2>Recent posts</h2>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="row footer">
+            <div class="col border-right">
+                <h3 class="text-center">About</h3>
+                <p class="text-start">
+                    Web site made using <a href="https://jekyllrb.com">Jekyll</a>.
+                </p>
+                <p class="text-start">
+                    Based on <a href="https://marcomonteiro.net">Marco Monteiro</a> website.
+                </p>
+            </div>
+            <div class="col">
+    
             </div>
         </div>
         
@@ -97,20 +143,18 @@
 </body>
 </html>
 
-
-
-            <!-- <div class="col-auto topbar-tray">
-                <div class="btn-group">
-                    <button type="button" class="btn dropdown-toggle topbar-text" data-bs-toggle="dropdown" aria-expanded="false">
-                        Arquivos
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item"> 1 </a>
-                        <a class="dropdown-item"> 2 </a>
-                        <a class="dropdown-item"> 3 </a>
-                        <a class="dropdown-item"> 4 </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item"> 5 </a>
-                    </div>
-                </div>
-            </div> -->
+<!-- <div class="col-auto topbar-tray">
+    <div class="btn-group">
+        <button type="button" class="btn dropdown-toggle topbar-text" data-bs-toggle="dropdown" aria-expanded="false">
+            Arquivos
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item"> 1 </a>
+            <a class="dropdown-item"> 2 </a>
+            <a class="dropdown-item"> 3 </a>
+            <a class="dropdown-item"> 4 </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item"> 5 </a>
+        </div>
+    </div>
+</div> -->
