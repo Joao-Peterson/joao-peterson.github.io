@@ -198,3 +198,7 @@ p.banner-title{
 	border-right-color: var(--navbar-font);
 	border-width: 1px;
 }
+
+lite-youtube{
+	margin: auto; 
+}

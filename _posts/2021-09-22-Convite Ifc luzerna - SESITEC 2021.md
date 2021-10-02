@@ -3,7 +3,7 @@ layout: post
 title:  "Convite Ifc luzerna - SESITEC 2021"
 author: Peterson
 date:   2021-09-22 11:30:00 -0300
-categories: [messages]
+categories: [Messages]
 published: true
 ---
 

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
-    <meta name="author" content="João Peterson">
-    <meta name="description" content="Personal site for me :)">
+
+    {% include meta.html %}
     
+    <link  href= "{{"lite-yt-embed/lite-yt-embed.css" | relative_url }}" rel="stylesheet">
+    <script src= "{{"lite-yt-embed/lite-yt-embed.js" | relative_url}}" defer></script>
     <link  href= "{{"bootstrap/css/bootstrap.min.css" | relative_url }}" rel="stylesheet">
     <script src= "{{"jquery/jquery-3.2.1.slim.min.js" | relative_url}}" defer></script>
     <script src= "{{"popperjs/popper.min.js" | relative_url}}" defer></script>
@@ -20,49 +22,27 @@
     <link href="{{"fonts/lato.css" | relative_url}}" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
-    <title>João Peterson | Programador</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{"images/favicon.png" | relative_url}}"/>
 </head>
 <body>
     <div class="container-fluid">
         
-        <!-- navbar -->
-        <div class="row">
-            <div class="col">
-                <nav id="main-nav" class="nav justify-content-start">
-                    <li class="nav-item">
-                        <a class="navbar-link navbar-text" href="/">
-                            Home
-                        </a>                
-                    </li>
-                </nav>
-            </div>
-            <div class="col">
-                <nav id="main-nav" class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="navbar-link navbar-text" href="#projetos">
-                            Portifólio
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-link navbar-text" href="/blog">
-                            Blog
-                        </a>
-                    </li>
-                </nav>
-            </div>
-        </div>
+        {% include navbar.html %}
         
-        <!-- content -->
-        <div class="row default-banner" style="height: fit-content;">
-            <h1 class="align-self-center text-uppercase"> {{ page.title }} </h1>
-        </div>
+        <main role="main">
+            <article itemscope itemtype="https://schema.org/Article">
+                <!-- content -->
+                <div class="row default-banner" style="height: fit-content;">
+                    <h1 class="align-self-center text-uppercase"> {{ page.title }} </h1>
+                </div>
+                
+                <div class="row default-banner" style="height: 100vh;">
+                    
+                    {{ content }}
         
-        <div class="row default-banner" style="height: 100vh;">
-            
-            {{ content }}
-
-        </div>
+                </div>
+            </article>
+        </main>
         
     </div>
 </body>

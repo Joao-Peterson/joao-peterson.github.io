@@ -3,7 +3,7 @@ layout: post
 title:  "printf(Hello world\n);"
 author: Peterson
 date:   2021-09-20 11:00:00 -0300
-categories: [messages]
+categories: [Messages]
 published: true
 ---
 
