@@ -3,24 +3,21 @@
     <div class="col">
         <nav id="main-nav" class="nav justify-content-start">
             <li class="nav-item">
-                <a class="navbar-link navbar-text" href="/">
-                    Home
+                <a class="navbar-link navbar-text" href={{ site.data.routes[0].route }}>
+                    {{ site.data.routes[0].label }}
                 </a>                
             </li>
         </nav>
     </div>
     <div class="col">
         <nav id="main-nav" class="nav justify-content-end">
-            <!-- <li class="nav-item">
-                <a class="navbar-link navbar-text" href="#projetos">
-                    Portifólio
-                </a>
-            </li> -->
+            {% for route in site.data.routes offset:1 %}
             <li class="nav-item">
-                <a class="navbar-link navbar-text" href="/blog">
-                    Blog
+                <a class="navbar-link navbar-text" href={{ route.route }}>
+                    {{ route.label }}
                 </a>
             </li>
+            {% endfor %}
         </nav>
     </div>
 </div>

@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Instalação Msys2 no Windows"
-author: Peterson
+author: peterson
 date:   2021-09-23 19:00:00 -0300
-categories: [Tutorials, C languages]
+categories: [tutorials, c_lang]
 published: true
 ---
 

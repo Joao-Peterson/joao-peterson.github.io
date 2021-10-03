@@ -3,8 +3,45 @@ layout: default
 ---
 
 <div class="col post">
-    <h2> By <b><a itemprop="author" name="{{ page.author}}">{{ page.author}}</a></b> on <b>{{ page.date | date: "%b %-d, %Y"}}</b>. </h2>
-    <h3> <b>Categories</b> {% for category in page.categories %} | {{category}} {%endfor%}</h3>
-    <br>
-    {{content}}
+    
+    <h2> 
+        By 
+        {% assign sep = false %}
+        {% for page-author in page.author %}
+        {% assign author = site.authors | where: "short-name", page-author | first %}
+            {% if sep == true %}
+            &            
+            {% else %}
+                {% assign sep = true %}
+            {% endif %}
+            <b>
+                <a itemprop="author" name="{{author.name}}" href="{{author.url}}">
+                    {{author.name}}
+                </a>
+            </b> 
+        {% endfor %}
+        on 
+        <b>
+            {{ page.date | date: "%b %-d, %Y"}}
+        </b>
+        . 
+    </h2>
+
+    <h3> 
+        <b>Categories</b>
+        {% for page-category in page.categories %}
+        {% assign category = site.category | where: "short-name", page-category | first %}
+            |
+            <b>
+                <a itemprop="author" name="{{category.name}}" href="{{category.url}}">
+                    {{category.name}}
+                </a>
+            </b> 
+        {% endfor %}
+    </h3>
+
+    <div>
+        {{content}}
+    </div>
+    
 </div>

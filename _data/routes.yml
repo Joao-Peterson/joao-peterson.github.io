@@ -1,0 +1,8 @@
+- label: Home
+  route: /
+
+- label: Blog
+  route: /blog
+
+# - label: Portfolio
+#   route: /port

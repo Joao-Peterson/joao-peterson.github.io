@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Finanças pessoais com Gnucash"
-author: Peterson
+# author: [peterson, carol] # Multiple author's
+author: [peterson]
 date:   2021-10-02 12:10:00 -0300
 description: "Começando com conteúdo novo no blog e canal sobre finanças pessoais e gnucash, nestes dois primeiros tutoriais temos a instalação do software e uma instrodução sobre contabilidade de partida dupla e contas."
-categories: [Tutorials, Gnucash, Finance]
+categories: [tutorials, gnucash, finances]
 keywords: [gnucash, finance]
 published: true
 ---

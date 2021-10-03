@@ -1,0 +1,21 @@
+<div class="col-3 blog-sidebar justify-content-end">
+    <!-- Authors -->
+    <h2>Authors</h2>
+    <ul>
+        {% for author in site.authors %}
+        <li>
+            <a href="{{ author.url }}">{{author.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <!-- Categories -->
+    <h2>Categories</h2>
+    <ul>
+        {% for category in site.category %}
+        <li>
+            <a href="{{ category.url }}">{{ category.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

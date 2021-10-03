@@ -1,0 +1,15 @@
+:root{
+    --author-bar-separator-color: #7d908dff;
+}
+
+.author-bar{
+    padding: 0;
+    
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    margin-right: 20%;
+
+    border-bottom-color: var(--author-bar-separator-color);
+    border-bottom-style: solid;
+    border-width: 2px;
+}
