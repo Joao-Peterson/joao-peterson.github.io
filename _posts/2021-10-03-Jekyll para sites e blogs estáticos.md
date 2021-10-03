@@ -11,6 +11,8 @@ published: true
 
 Olá a todos, gravei um video de apresentação do site/blog e de como utilizei o framework jekyll em conjunto com o github-pages para criar um excelente site com funcionalidade de blog ótima de forma 100% estática e grátis.
 
+
+**Obs**: video temporário
 <div style="margin: 40px">
     <lite-youtube videoid="wvETU3rHp5s">
         <button type="button" class="lty-playbtn">
