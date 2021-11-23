@@ -2,7 +2,7 @@
 layout: post
 title:  "Configurando Xserver com driver da Nvidia para GPU integrada e dedicada no Arch linux"
 author: [peterson]
-date:   2021-10-30 16:30:00 -0300
+date:   2021-11-23 01:37:00 -0300
 description: "Configurando Xserver com driver da Nvidia para GPU integrada e dedicada no Arch linux"
 categories: [tutorials, linux]
 keywords: [arch-linux, linux ,nvidia ,nvidia-prime ,xserver]
