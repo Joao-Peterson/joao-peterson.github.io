@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Workshop de programação em C - 2º"
+title:  "Workshop de programação em C - 2º Edição"
 author: [peterson]
 date:   2021-10-30 16:30:00 -0300
 description: "Workshop de Programação em C - SESITEC X - 2021."
