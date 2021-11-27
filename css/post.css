@@ -41,3 +41,14 @@
 .post a:hover{
 	color: var(--post-highlight-text);
 }
+
+.post p{
+	margin-bottom: 15px;
+}
+
+.post img{
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
