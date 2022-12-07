@@ -1,9 +1,9 @@
 /* class */
 :root{
     --post-background: rgb(230, 238, 236);
-	--post-text: #7d908dff;
-	--post-href-text: rgb(81, 90, 90);
-	--post-highlight-text: rgb(158, 199, 193);
+	--post-text: #5E6E6C;
+	--post-href-text: #5AB5A7;
+	--post-highlight-text: #95D0C7;
 }
 
 .post{
@@ -16,8 +16,9 @@
 	font-size: 17px;
 }
 
-.post h2{
-	padding: 5px;
+.post .post-header>h1, .post .post-header>h2{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 	
 	color: var(--post-text);
 	font-family: 300 13px/20px 'Open Sans',sans-serif;
@@ -25,13 +26,32 @@
 	font-size: 20px;
 }
 
-.post h3{
-	padding: 5px;
+.post .post-header>h2{
+	margin-bottom: 1em;
+}
+
+.post h1, h2, h3{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0px;
 	
 	color: var(--post-text);
 	font-family: 300 13px/20px 'Open Sans',sans-serif;
 	font-weight: 400;
-	font-size: 15px;
+}
+
+.post h1{
+	font-size: 48px;
+}
+
+.post h2{
+	font-size: 37px;
+	font-weight: 500;
+}
+
+.post h3{
+	font-size: 30px;
+	font-weight: 500;
 }
 
 .post a{
@@ -43,7 +63,9 @@
 }
 
 .post p{
-	margin-bottom: 15px;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: justify;
 }
 
 .post img{
@@ -51,4 +73,28 @@
 	height: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.post ul{
+	padding-left: 30px;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+	font-weight: 500;
+}
+
+.post li{
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
+
+code{
+	color: orange;
+}
+
+.highlight{
+	border-radius: 1ex;
+	padding: 1ex;
+	margin: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }

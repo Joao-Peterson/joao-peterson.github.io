@@ -1,0 +1,6 @@
+{
+    "cSpell.language": "pt-BR,en-US",
+    "cSpell.enabled": true,
+    "pasteImage.showFilePathConfirmInputBox": true,
+    "pasteImage.path": "${projectRoot}/assets"
+}

@@ -4,41 +4,43 @@ layout: default
 
 <div class="col post">
     
-    <h2> 
-        By 
-        {% assign sep = false %}
-        {% for page-author in page.author %}
-        {% assign author = site.authors | where: "short-name", page-author | first %}
-            {% if sep == true %}
-            &            
-            {% else %}
-                {% assign sep = true %}
-            {% endif %}
+    <div class="post-header">
+        <h1> 
+            By 
+            {% assign sep = false %}
+            {% for page-author in page.author %}
+            {% assign author = site.authors | where: "short-name", page-author | first %}
+                {% if sep == true %}
+                &            
+                {% else %}
+                    {% assign sep = true %}
+                {% endif %}
+                <b>
+                    <a itemprop="author" name="{{author.name}}" href="{{author.url}}">
+                        {{author.name}}
+                    </a>
+                </b> 
+            {% endfor %}
+            on 
             <b>
-                <a itemprop="author" name="{{author.name}}" href="{{author.url}}">
-                    {{author.name}}
-                </a>
-            </b> 
-        {% endfor %}
-        on 
-        <b>
-            {{ page.date | date: "%-d %b %Y | %H:%M"}}
-        </b>
-        . 
-    </h2>
+                {{ page.date | date: "%-d %b %Y | %H:%M"}}
+            </b>
+            . 
+        </h1>
 
-    <h3> 
-        <b>Categories</b>
-        {% for page-category in page.categories %}
-        {% assign category = site.category | where: "short-name", page-category | first %}
-            |
-            <b>
-                <a itemprop="author" name="{{category.name}}" href="{{category.url}}">
-                    {{category.name}}
-                </a>
-            </b> 
-        {% endfor %}
-    </h3>
+        <h2> 
+            <b>Categories</b>
+            {% for page-category in page.categories %}
+            {% assign category = site.category | where: "short-name", page-category | first %}
+                |
+                <b>
+                    <a itemprop="author" name="{{category.name}}" href="{{category.url}}">
+                        {{category.name}}
+                    </a>
+                </b> 
+            {% endfor %}
+        </h2>
+    </div>
 
     <div>
         {{content}}
