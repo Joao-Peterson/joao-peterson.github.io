@@ -14,7 +14,7 @@ Olá leitores, acabei de alterar uma coisas no site e resolvi escrever por que a
 
 Para começar eu roubei um botão padrão de mim mesmo e usei um ícone do *font awesome*, o botão ficou assim em css e html:
 
-[`post.css`](https://github.com/Joao-Peterson/joao-peterson.github.io/tree/master/css/post.css):
+[`post.css`](https://github.com/Joao-Peterson/joao-peterson.github.io/blob/1b53092cab639331922f3b33e55cec5a300cfb42/css/post.css):
 ```css
 :root{
     --post-background: rgb(230, 238, 236);
@@ -53,7 +53,7 @@ Para começar eu roubei um botão padrão de mim mesmo e usei um ícone do *font
 }
 ```
 
-[`post.html`](https://github.com/Joao-Peterson/joao-peterson.github.io/tree/master/_layouts/post.html):
+[`post.html`](https://github.com/Joao-Peterson/joao-peterson.github.io/blob/1b53092cab639331922f3b33e55cec5a300cfb42/_layouts/post.html):
 ```html
 ...
 
@@ -74,7 +74,7 @@ Para começar eu roubei um botão padrão de mim mesmo e usei um ícone do *font
 
 O elemento do botão, quando clicado chama `copyBibtex()`:
 
-[`bibtex.js`](https://github.com/Joao-Peterson/joao-peterson.github.io/tree/master/js/bibtex.js)
+[`bibtex.js`](https://github.com/Joao-Peterson/joao-peterson.github.io/blob/1b53092cab639331922f3b33e55cec5a300cfb42/js/bibtex.js)
 ```javascript
 async function copyBibtex(){
 	var bib = genbib();
@@ -110,7 +110,7 @@ A resposta é, gambiarra. As variáveis do jekyll, que são acessadas via liquid
 
 A solução foi a seguinte, no momento de gerar o html, eu fiz o liquid jogar essas variáveis dentro do html em uma tag `script`:
 
-[`default.html`](https://github.com/Joao-Peterson/joao-peterson.github.io/tree/master/_layouts/default.html):
+[`default.html`](https://github.com/Joao-Peterson/joao-peterson.github.io/blob/1b53092cab639331922f3b33e55cec5a300cfb42/_layouts/default.html):
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -133,7 +133,7 @@ A solução foi a seguinte, no momento de gerar o html, eu fiz o liquid jogar es
 ...
 ```
 
-[`jekyll_vars.html`](https://github.com/Joao-Peterson/joao-peterson.github.io/tree/master/_includes/jekyll_vars.html):
+[`jekyll_vars.html`](https://github.com/Joao-Peterson/joao-peterson.github.io/blob/1b53092cab639331922f3b33e55cec5a300cfb42/_includes/jekyll_vars.html):
 ```javascript
 <script defer>
 var jekyll = {
