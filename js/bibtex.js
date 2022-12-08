@@ -31,7 +31,7 @@ var bib =
 	journal={Peterson's Blog},
 	year={${postDate.getFullYear()}}
 	title={${jekyll.page.title}},
-	url={${jekyll.site.url}},
+	url={${document.URL}},
 	urlaccessdate={${date.getDay()} ${month[date.getMonth()]}. ${date.getFullYear()}},
 }`;
 
