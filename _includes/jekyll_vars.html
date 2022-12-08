@@ -1,0 +1,67 @@
+<script defer>
+var jekyll = {
+	site: {
+		title:              '{{site.title}}',
+		time:               '{{site.time}}',
+		collections:        '{{site.collections}}',
+		data:               '{{site.data}}',
+		tags:               '{{site.tags.TAG}}',
+		url:                '{{site.url}}',
+	},
+	page:{
+		authors:[
+			{% assign sep = false %}
+			{% for page-author in page.author %}
+			{% assign author = site.authors | where: "short-name", page-author | first %}
+				{% if sep == true %}
+				,            
+				{% else %}
+					{% assign sep = true %}
+				{% endif %}
+					'{{author.name}}'
+			{% endfor %}
+		],
+		authorsShort:[
+			{% assign sep = false %}
+			{% for page-author in page.author %}
+			{% assign author = site.authors | where: "short-name", page-author | first %}
+				{% if sep == true %}
+				,            
+				{% else %}
+					{% assign sep = true %}
+				{% endif %}
+					'{{author.short-name}}'
+			{% endfor %}
+		],
+		title:              '{{page.title}}',
+		url:                '{{page.url}}',
+		date:               '{{page.date}}',
+		id:                 '{{page.id}}',
+		categories:         '{{page.categories}}',
+		collection:         '{{page.collection}}',
+		tags:               '{{page.tags}}',
+		dir:                '{{page.dir}}',
+		name:               '{{page.name}}',
+		path:               '{{page.path}}',
+	},
+	theme:{
+		root:               '{{theme.root}}',
+		authors:            '{{theme.authors}}',
+		description:        '{{theme.description}}',
+		version:            '{{theme.version}}',
+		dependencies:       '{{theme.dependencies}}',
+		metadata:           '{{theme.metadata}}',
+	},
+	paginator:{
+		page:               '{{paginator.page}}',
+		per_page:           '{{paginator.per_page}}',
+		posts:              '{{paginator.posts}}',
+		total_posts:        '{{paginator.total_posts}}',
+		total_pages:        '{{paginator.total_pages}}',
+		previous_page:      '{{paginator.previous_page}}',
+		previous_page_path: '{{paginator.previous_page_path}}',
+		next_page:          '{{paginator.next_page}}',
+		next_page_path:     '{{paginator.next_page_path	}}',
+	}
+};
+</script>

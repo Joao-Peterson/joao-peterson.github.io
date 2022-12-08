@@ -16,6 +16,11 @@
 	font-size: 17px;
 }
 
+.post-header{
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .post .post-header>h1, .post .post-header>h2{
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
@@ -97,4 +102,31 @@ code{
 	margin: 0;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
+}
+
+.meta-button a{
+	position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 1px solid var(--banner-font);
+    color: var(--banner-font);
+	text-align: center;
+}
+
+.meta-button a:hover{
+	border-bottom: 1px solid var(--post-highlight-text);
+	color: var(--post-highlight-text);
+}
+
+.meta-button li {
+	padding-left: 0.5ex;
+	padding-right: 0.5ex;
+}
+
+.meta-button ul{
+	margin: 0;
+	padding: 0;
+	display: inline-flex;
+	list-style-type: none;
 }

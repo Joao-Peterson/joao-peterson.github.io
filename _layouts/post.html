@@ -3,43 +3,62 @@ layout: default
 ---
 
 <div class="col post">
-    
-    <div class="post-header">
-        <h1> 
-            By 
-            {% assign sep = false %}
-            {% for page-author in page.author %}
-            {% assign author = site.authors | where: "short-name", page-author | first %}
-                {% if sep == true %}
-                &            
-                {% else %}
-                    {% assign sep = true %}
-                {% endif %}
+    <div class="row">
+        <!-- header -->
+        <div class="post-header col">
+            <!-- author date -->
+            <h1> 
+                By 
+                {% assign sep = false %}
+                {% for page-author in page.author %}
+                {% assign author = site.authors | where: "short-name", page-author | first %}
+                    {% if sep == true %}
+                    &            
+                    {% else %}
+                        {% assign sep = true %}
+                    {% endif %}
+                    <b>
+                        <a itemprop="author" name="{{author.name}}" href="{{author.url}}">
+                            {{author.name}}
+                        </a>
+                    </b> 
+                {% endfor %}
+                on 
                 <b>
-                    <a itemprop="author" name="{{author.name}}" href="{{author.url}}">
-                        {{author.name}}
-                    </a>
-                </b> 
-            {% endfor %}
-            on 
-            <b>
-                {{ page.date | date: "%-d %b %Y | %H:%M"}}
-            </b>
-            . 
-        </h1>
+                    {{ page.date | date: "%-d %b %Y | %H:%M"}}
+                </b>
+                . 
+            </h1>
+            
+            <!-- categories -->
+            <h2> 
+                <b>Categories</b>
+                {% for page-category in page.categories %}
+                {% assign category = site.category | where: "short-name", page-category | first %}
+                    |
+                    <b>
+                        <a itemprop="author" name="{{category.name}}" href="{{category.url}}">
+                            {{category.name}}
+                        </a>
+                    </b> 
+                {% endfor %}
+            </h2>
+        </div>
 
-        <h2> 
-            <b>Categories</b>
-            {% for page-category in page.categories %}
-            {% assign category = site.category | where: "short-name", page-category | first %}
-                |
-                <b>
-                    <a itemprop="author" name="{{category.name}}" href="{{category.url}}">
-                        {{category.name}}
-                    </a>
-                </b> 
-            {% endfor %}
-        </h2>
+        <!-- header buttons -->
+        <div class="col-md-auto post-header">
+            <div class="meta-button text-center text-bottom">
+                <ul>
+                    <!-- bibtex cite -->
+                    <li>
+                        <a href="#" onclick="copyBibtex()" data-toggle="tooltip" title="Cite as bibtex">
+                            <i class="fa fa-quote-right"></i>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div>
