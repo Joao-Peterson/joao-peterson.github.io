@@ -13,7 +13,7 @@
 	color: var(--post-text);
 	font-family: 300 13px/20px 'Open Sans',sans-serif;
 	font-weight: 400;
-	font-size: 17px;
+	font-size: 1.7vh;
 }
 
 .post-header{
@@ -28,7 +28,7 @@
 	color: var(--post-text);
 	font-family: 300 13px/20px 'Open Sans',sans-serif;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 1.8vh;
 }
 
 .post .post-header>h2{
@@ -46,16 +46,16 @@
 }
 
 .post h1{
-	font-size: 48px;
+	font-size: 2.3vh;
 }
 
 .post h2{
-	font-size: 37px;
+	font-size: 2.1vh;
 	font-weight: 500;
 }
 
 .post h3{
-	font-size: 30px;
+	font-size: 1.9vh;
 	font-weight: 500;
 }
 
@@ -90,6 +90,10 @@
 .post li{
 	padding-top: 0.3em;
 	padding-bottom: 0.3em;
+}
+
+.post content{
+	
 }
 
 code{

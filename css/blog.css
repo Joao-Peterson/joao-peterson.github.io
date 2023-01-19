@@ -14,9 +14,7 @@
 
 .blog-posts{
 	background-color: var(--blog-posts-background);
-	padding: 15px;
-	padding-top: 45px;
-	padding-left: 45px;
+	padding: 5%;
 }
 
 .myposts{
@@ -24,7 +22,7 @@
 	color: var(--blog-posts-text);
 	font-family: 300 13px/20px 'Open Sans',sans-serif;
 	font-weight: 400;
-	font-size: 17px;
+	font-size: 2vh;
 }
 
 .myposts li{
@@ -41,31 +39,32 @@
 }
 
 .myposts p{
-	font-size: 14px;
+	font-size: 1.7vh;
 }
 
 .default-banner {
 	background-color: var(--blog-banner-background);
-	padding-top: 15px;
-	padding-bottom: 20px;
+	padding-top: 3%;
+	padding-bottom: 3%;
 }
 
 .default-banner h1{
 	color: var(--blog-banner-text);
 	font-family: 'Lato';
-	font-weight: 100;
-	font-size: 300%;
+	font-size: 4vw;
+	font-weight: 200;
 	
 	word-wrap: break-word;
 	
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-left: 3%;
+	padding-right: 3%;
 }
 
 .blog-sidebar{
 	background-color: var(--blog-sidebar-background);
 	padding: 10px;
 	padding-left: 13px;
+	font-size: 1.7vh;
 }
 
 .blog-sidebar ul{
@@ -92,7 +91,7 @@
 }
 
 .blog-sidebar p{
-	font-size: 14px;
+	/* font-size: 1.7vh; */
 }
 
 .blog-sidebar h2{
@@ -101,5 +100,9 @@
 	color: var(--post-text);
 	font-family: 300 13px/20px 'Open Sans',sans-serif;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 2.1vh;
+
+	border-style: solid;
+	border-width: 0px;
+	border-bottom-width: 2px;
 }
