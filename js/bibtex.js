@@ -32,7 +32,7 @@ var bib =
 	year={${postDate.getFullYear()}}
 	title={${jekyll.page.title}},
 	url={${document.URL}},
-	urlaccessdate={${date.getDay()} ${month[date.getMonth()]}. ${date.getFullYear()}},
+	urlaccessdate={${date.getDate()} ${month[date.getMonth()]}. ${date.getFullYear()}},
 }`;
 
 	return bib;

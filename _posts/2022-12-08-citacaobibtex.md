@@ -97,7 +97,7 @@ var bib =
 	year={${postDate.getFullYear()}}
 	title={${jekyll.page.title}},
 	url={${jekyll.site.url}},
-	urlaccessdate={${date.getDay()} ${month[date.getMonth()]}. ${date.getFullYear()}},
+	urlaccessdate={${date.getDate()} ${month[date.getMonth()]}. ${date.getFullYear()}},
 }`;
 
 	return bib;
