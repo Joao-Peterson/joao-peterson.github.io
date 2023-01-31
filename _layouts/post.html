@@ -43,6 +43,11 @@ layout: default
                     </b> 
                 {% endfor %}
             </h2>
+
+            <!-- page view counter -->
+            <h2>
+                <em>Visualizações: <span id="views-counter">#</span></em>
+            </h2>
         </div>
 
         <!-- header buttons -->
@@ -55,7 +60,12 @@ layout: default
                             <i class="fa fa-quote-right"></i>
                         </a>
                     </li>
-                    
+                    <!-- rss feed -->
+                    <li>
+                        <a href="/feed.xml" data-toggle="tooltip" title="Subscribe to the blog RSS feed">
+                            <i class="fa fa-feed"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
