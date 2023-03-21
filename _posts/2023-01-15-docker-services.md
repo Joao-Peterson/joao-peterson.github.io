@@ -4,7 +4,7 @@ title:  "Como criar um serviço systemd para uma imagem docker"
 author: [peterson]
 date:   2023-01-15 20:35:00 -0300
 description: "Como criar um serviço systemd para uma imagem docker"
-categories: [linux, tutorials, docker]
+categories: [linux, tutorials, docker, sysadmin]
 keywords: [linux, sysadmin, tutorials, docker, archlinux]
 published: true
 katex: true
