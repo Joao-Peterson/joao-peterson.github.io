@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Remapeando teclas no linux usando keyd"
+title:  "Remapeando teclas no linux usando keyd + config GMK67"
 author: [peterson]
 date:   2023-08-01 12:00:00 -0300
-description: "Remapeando teclas no linux usando keyd"
+description: "Remapeando teclas no linux usando keyd + config GMK67"
 categories: [linux, tutorials, keyboard]
 keywords: [linux, tutorials, keyboard, keyd]
 published: true
@@ -91,6 +91,53 @@ $ sudo keyd reload
 ```
 
 Nota se ainda no arquivo de config as opções de navegação que eu desejo, home, end e pgup e down nas teclas direcionais, isso é feito a partir do mecanismo de layers do keyd. Cada layer no keyd é uma separação lógica de teclas que são remapeadas somente dada a condição, a layer main é onde tudo acontece mas podem definidas layers separadas, que podem ser ativadas por comandos, como o pressionar de um modificador, como ctrl, shift e etc. A tecla capslock é remapeada para o action de overload, que permite que quando capslock seja apenas tocada, execute a função de capslock normal, mas quando segurada, ativa a layer nav, layer que remapeia as teclas direcionais para as desejadas.
+
+# Utilização com GMK67
+
+Para o teclado GMk67 em específico, eu fiz algumas alterações para que o controlador de volume funcionasse. A config pode ser encontrada nesse gist: [Using GMK67 keyboard in linux](https://gist.github.com/Joao-Peterson/d9b327b17933a128ee6d94c4c418df0c). Mas aqui está a config do keyd:
+
+```ini
+[ids]
+
+*
+
+[main]
+
+# Maps capslock to escape when pressed and control when held.
+# capslock = overload(control, esc)
+
+# Remaps the escape key to capslock
+#esc = capslock
+
+brightnessdown = f1
+brightnessup = f2
+scale = f3
+dashboard = f4
+kbdillumdown = f5
+kbdillumup = f6
+previoussong = f7
+playpause = f8
+nextsong = f9
+mute = f10
+volumedown = f11
+volumeup = f12
+
+# activates nav while held, but a tap is a normal capslock
+capslock = overload(nav, capslock)
+
+[nav]
+
+up = pageup
+down = pagedown
+left = home
+right = end
+
+[meta]
+
+mute = playpause
+volumedown = volumedown
+volumeup = volumeup
+```
 
 # Conclusão
 
