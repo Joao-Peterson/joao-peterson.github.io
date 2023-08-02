@@ -38,11 +38,16 @@ Em meu caso de uso, tenho um teclado que quando usado no linux emite teclas mult
 
 Para isso basta criar o seguinte arquivo:
 
-`/etc/keyd/default.conf`:
+`/etc/keyd/gmk67.conf`:
 ```ini
+###
+# GMK76 remap config file
+###
+
 [ids]
 
-*
+# all interface (BT, USB, 2.4Ghz dongle)
+k:05ac:024f
 
 [main]
 
@@ -74,6 +79,12 @@ up = pageup
 down = pagedown
 left = home
 right = end
+
+[meta]
+
+mute = playpause
+volumedown = volumedown
+volumeup = volumeup
 ```
 
 Onde pode se ver que as ações de multimedia foram remapeadas para as teclas de função correspondentes.
