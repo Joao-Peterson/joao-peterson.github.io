@@ -2,7 +2,7 @@
 layout: post
 title:  "Debugando aplicações .NET core no Code OSS e GDB usando debugger open source"
 author: [peterson]
-date:   2023-08-01 12:00:00 -0300
+date:   2023-09-20 01:00:00 -0300
 description: "Debugando aplicações .NET core no Code OSS e GDB usando debugger open source"
 categories: [linux, tutorials, keyboard, dotnet]
 keywords: [linux, tutorials, keyboard, keyd, .net, dotnet, netcoredbg]
