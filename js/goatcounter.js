@@ -1,12 +1,25 @@
-// xmlhttp
-var r = new XMLHttpRequest();
+var viewsCounter = document.getElementById('views-counter');
 
-r.addEventListener('load', function() {
-	document.querySelector('#views-counter').innerText = JSON.parse(this.responseText).count
-});
+if(viewsCounter){
+	fetch(
+		'https://d85dbedf-c6cc-4624-bcbe-eab483a2be4d.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json',
+		{
+			method: "GET"
+		}
+	)
+	.then((res) => res.json())
+	.then((json) => viewsCounter.textContent = json.count)
+	.catch((err) => console.log(`Error getting post counts: ${err}`));
+}
 
-r.open('GET', 'https://d85dbedf-c6cc-4624-bcbe-eab483a2be4d.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json');
-r.send();
+// // xmlhttp
+// var r = new XMLHttpRequest();
+
+// r.addEventListener('load', function() {
+// });
+
+// r.open('GET', 'https://d85dbedf-c6cc-4624-bcbe-eab483a2be4d.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json');
+// r.send();
 
 // fetch api
 
