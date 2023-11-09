@@ -89,6 +89,30 @@
 	padding-right: 10%;
 }
 
+/* relative, so we can inject the copy button later */
+.post div.highlighter-rouge{
+	position: relative;
+}
+
+/* top left copy button */
+.post div.codeCopy{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/* copy button icon */
+.codeCopy span.fa{
+	font-size: 20px;
+	padding: 10px;
+	color: var(--post-text);
+}
+
+.codeCopy:hover span.fa{
+	cursor: pointer;
+	color: var(--post-highlight-text);
+}
+
 .post ul{
 	padding-left: 30px;
 	margin-top: 0.25em;
