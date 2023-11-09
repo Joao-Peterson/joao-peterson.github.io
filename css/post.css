@@ -74,12 +74,19 @@
 }
 
 .post img{
+	/* fit image to use all (width - padding), with auto height and max of 50% of viewport height, */
+	/* that ensures it never occupies more than half of the screen,                                */
+	/* also we set fit to scale-down, so that on max height,                                       */
+	/* the image can be scale down withour losing aspect ratio or center aligment                  */
+	object-fit: scale-down;
 	width: 100%;
 	height: auto;
+	max-height: 50vh;
+
 	margin-top: 10px;
 	margin-bottom: 10px;
-	padding-left: 15%;
-	padding-right: 15%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .post ul{
@@ -97,6 +104,11 @@
 /* .post content{
 	
 } */
+
+/* fix annoying bottom padding on code blocks */
+pre.highlight code{
+	display: inline-block;
+}	
 
 .highlight{
 	border-radius: 1ex;
