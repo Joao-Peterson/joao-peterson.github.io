@@ -44,11 +44,12 @@
 }
 
 .myposts p{
-	font-size: 1.7vh;
+	padding-top: .5ex;
+	font-size: 83%;
 }
 
 p.smallDesc{
-	font-size: 60%;
+	font-size: 62%;
 }
 
 .default-banner {
@@ -100,7 +101,7 @@ p.smallDesc{
 }
 
 .blog-sidebar p{
-	/* font-size: 1.7vh; */
+	font-size: 1.7vh;
 }
 
 .blog-sidebar h2{
