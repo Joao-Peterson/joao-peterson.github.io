@@ -47,16 +47,38 @@
 
                 </div>
         
+                <!-- present media, alt background color -->
+                <div class="row sections">
+                    <h2>Recent posts</h2>
+                    <div class="section-body">
+                        {% include cards.html %}
+                    </div>
+                </div>
+
                 <!-- present media -->
                 <div id="projetos" class="row">
                     <div class="container-fluid sections">
         
                         <h2>Recent videos</h2>
                         
-                        <div id="projetos-carousel" class="carousel slide" data-bs-ride="carousel">
+                        <div id="projetos-carousel" class="carousel slide section-body" data-bs-ride="carousel">
                             <div class="carousel-inner">
         
                                 <div class="carousel-item active text-center">
+                                    <lite-youtube videoid="waKNCqydy58">
+                                        <button type="button" class="lty-playbtn">
+                                        </button>
+                                    </lite-youtube>
+                                </div>
+
+                                <div class="carousel-item text-center">
+                                    <lite-youtube videoid="R7Ttwp_8Qaw">
+                                        <button type="button" class="lty-playbtn">
+                                        </button>
+                                    </lite-youtube>
+                                </div>
+
+                                <div class="carousel-item text-center">
                                     <lite-youtube videoid="8VHXpFbpFm4">
                                         <button type="button" class="lty-playbtn">
                                             <span class="lyt-visually-hidden">Projeto Estação Meteorológica com banco de dados, api rest e interface web - Estrutura física</span>
@@ -88,14 +110,6 @@
         
                     </div>
                 </div>
-                
-                <!-- present media, alt background color -->
-                <div class="row">
-                    <div class="container-fluid sections sections-alt">
-                        <h2>Recent posts</h2>
-                    </div>
-                </div>
-
             </article>
         </main>
 

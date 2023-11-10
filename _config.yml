@@ -20,18 +20,16 @@
 
 title: Peterson
 author: João Peterson
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until new value
   This is my personal website that was made to show my skills, content and
   other types of media. Feel free to contact me, read my blog, see my youtube
   content, i just wanna my knowledge with people that are interested on 
   what i do.
 
-keywords: programming, portuguese, c, C, portfolio, joao-peterson, blog
+keywords: programming, portuguese, linux, portfolio, joao-peterson, blog, brazil, ptBR
 content-language: pt-br, en-US
 
-email: jooxpeters@gmail.com
-twitter_username: bruhhhh
-github_username:  Joao-Peterson
+email: peterson.sch.biz@gmail.com
   
 collections:
   authors:

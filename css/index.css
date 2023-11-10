@@ -16,9 +16,15 @@
 }
 
 /* make the screen whole */
-html, body, .container-fluid{
+html, body, .container-fluid, .container{
   	height: 100%;
+	margin: 0;
 	padding: 0;
+}
+
+main{
+	padding-bottom: 25px;
+	background-color: var(--sections-background1);
 }
 
 body {
@@ -37,9 +43,9 @@ h2{
 	font-size: 140%;
 }
 
-p{
+/* p{
 	font-size: 110%;
-}
+} */
 
 ul, li{
 	padding: 0;
@@ -72,7 +78,7 @@ p.banner-title{
 	align-items: center;
 	justify-content: center;
 
-	height: 50vh;
+	height: 40vh;
 }
 
 .nav {
@@ -136,23 +142,72 @@ p.banner-title{
 	background-color: var(--sections-background1);
 }
 
+.section-body {
+	padding: 3ex;
+	background-color: var(--banner-background);
+}
+
+.blogCard{
+	margin-top: 1ex;
+	margin-bottom: 1ex;
+	padding: 1ex;
+
+	width: 100%;
+	max-width: 45vw;
+	max-height: 25vh;
+	/* overflow: auto; */
+
+	background-color: var(--sections-background1);
+	border-radius: 1ex;
+	color: var(--sections-text);
+	font-size: 90%;
+}
+
+p.blogCardBody{
+	font-size: 60%;
+	max-height: 100%;
+	box-sizing: border-box;
+}
+
+.blogCardTitle{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.blogCardInfo{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.blogCard p.section-body{
+	margin-top: 1ex;
+	border-radius: .5ex;
+	padding: 1ex;
+}
+
+.blogCard a{
+	padding: 0;
+	color: var(--sections-text);
+}
+
+.blogCard a:hover{
+	color: var(--highlight);
+}
+
 .sections-alt {
 	background-color: var(--sections-background2);
 }
 
 .sections h2{
-	margin-top: 10px;
-	margin-bottom: 15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
 	text-align: center;
 	color: var(--sections-text);
 	
 	font-family: 300 13px/20px 'Open Sans',sans-serif;
 	font-weight: 300;
-}
-
-.carousel{
-	margin-right: 3%;
-	margin-left: 3%;
 }
 
 .carousel-item{
