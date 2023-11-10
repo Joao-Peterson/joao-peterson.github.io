@@ -1,16 +1,36 @@
-var viewsCounter = document.getElementById('views-counter');
+for(var views of document.getElementsByName("viewCounter")){
+	const view = views;
+	const url = view.id;
 
-if(viewsCounter){
-	fetch(
-		'https://d85dbedf-c6cc-4624-bcbe-eab483a2be4d.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json',
-		{
-			method: "GET"
-		}
-	)
+	const goatUrl = 'https://d85dbedf-c6cc-4624-bcbe-eab483a2be4d.goatcounter.com/counter/' + 
+		encodeURIComponent(url) + '.json';
+
+	fetch(goatUrl,{
+		method: "GET",
+		// mode: "no-cors"
+	})
 	.then((res) => res.json())
-	.then((json) => viewsCounter.textContent = json.count)
-	.catch((err) => console.log(`Error getting post counts: ${err}`));
+	.then((json) => json.count)
+	.then((count) => view.textContent = count)
+	.catch((err) => {
+		console.log(`Error getting post counts: ${err}`);
+		view.textContent = "#";
+	});
 }
+
+// var viewsCounter = document.getElementById('views-counter');
+
+// if(viewsCounter){
+// 	fetch(
+// 		'https://d85dbedf-c6cc-4624-bcbe-eab483a2be4d.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json',
+// 		{
+// 			method: "GET"
+// 		}
+// 	)
+// 	.then((res) => res.json())
+// 	.then((json) => viewsCounter.textContent = json.count)
+// 	.catch((err) => console.log(`Error getting post counts: ${err}`));
+// }
 
 // // xmlhttp
 // var r = new XMLHttpRequest();
