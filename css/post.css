@@ -8,7 +8,7 @@
 
 .post{
 	background-color: var(--post-background);
-	padding: 5%;
+	padding: 5ex;
 
 	color: var(--post-text);
 	font-family: 300 13px/20px 'Open Sans',sans-serif;

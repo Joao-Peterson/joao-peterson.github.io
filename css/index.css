@@ -22,9 +22,21 @@ html, body, .container-fluid, .container{
 	padding: 0;
 }
 
+article{
+	margin: auto;
+	max-width: 100%;
+	/* width: 50%; */
+}
+
+@media only screen and (min-width: 1500px){
+	article{
+		max-width: 1500px;
+	}
+}
+
 main{
 	padding-bottom: 25px;
-	background-color: var(--sections-background1);
+	background-color: var(--banner-background);
 }
 
 body {
@@ -41,6 +53,7 @@ h1{
 
 h2{
 	font-size: 140%;
+	width: 100vw;
 }
 
 /* p{
@@ -85,8 +98,8 @@ p.banner-title{
 	background-color: var(--navbar-background);
 	padding-top: 1px;
 	padding-bottom: 5px;
-	padding-left: 2%;
-	padding-right: 2%;
+	padding-left: 1vw;
+	padding-right: 1vw;
 }
 
 .nav-item a{
@@ -148,14 +161,12 @@ p.banner-title{
 }
 
 .blogCard{
-	margin-top: 1ex;
-	margin-bottom: 1ex;
+	margin: auto;
+	margin-bottom: 3ex;
 	padding: 1ex;
 
-	width: 100%;
-	max-width: 45vw;
+	max-width: 85vw;
 	max-height: 25vh;
-	/* overflow: auto; */
 
 	background-color: var(--sections-background1);
 	border-radius: 1ex;
@@ -163,10 +174,16 @@ p.banner-title{
 	font-size: 90%;
 }
 
-p.blogCardBody{
-	font-size: 60%;
-	max-height: 100%;
-	box-sizing: border-box;
+.blogCardBody{
+	font-size: 80%;
+	margin-top: 1ex;
+	border-radius: .5ex;
+	padding: 1ex;
+
+	max-height: calc(25vh - 6em);
+	overflow: hidden;
+
+	background-color: var(--banner-background);
 }
 
 .blogCardTitle{
@@ -179,12 +196,6 @@ p.blogCardBody{
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-}
-
-.blogCard p.section-body{
-	margin-top: 1ex;
-	border-radius: .5ex;
-	padding: 1ex;
 }
 
 .blogCard a{

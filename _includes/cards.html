@@ -1,35 +1,14 @@
-<div class="container">
-	<div class="row justify-content-start">
-		<div class="col blogCard">
-			<a href="{{ site.posts[0].url }}">
-				<p class="blogCardTitle">{{ site.posts[0].title }}</p>
-				<p class="blogCardInfo">{{ site.posts[0].date | date: "%-d %b %Y | %H:%M" }}</p>
-				<p class="section-body blogCardBody">
-					{{ site.posts[0].content | strip_html | truncatewords: 30 }}
-				</p>    
-			</a>
-		</div>
+<div>
+	{% assign recent = site.posts | slice: 0, 3 %}
+	{% for post in recent %}
+	<div class="blogCard">
+		<a href="{{ post.url }}">
+			<p class="blogCardTitle">{{ post.title }}</p>
+			<p class="blogCardInfo">{{ post.date | date: "%-d %b %Y | %H:%M" }}</p>
+			<div class="blogCardBody">
+				<p>{{ post.content | strip_html | truncatewords: 75 }}</p>
+			</div>
+		</a>
 	</div>
-	<div class="row justify-content-center">
-		<div class="col blogCard">
-			<a href="{{ site.posts[1].url }}">
-				<p class="blogCardTitle">{{ site.posts[1].title }}</p>
-				<p class="blogCardInfo">{{ site.posts[1].date | date: "%-d %b %Y | %H:%M" }}</p>
-				<p class="section-body blogCardBody">
-					{{ site.posts[1].content | strip_html | truncatewords: 30 }}
-				</p>    
-			</a>
-		</div>
-	</div>
-	<div class="row justify-content-end">
-		<div class="col blogCard">
-			<a href="{{ site.posts[2].url }}">
-				<p class="blogCardTitle">{{ site.posts[2].title }}</p>
-				<p class="blogCardInfo">{{ site.posts[2].date | date: "%-d %b %Y | %H:%M" }}</p>
-				<p class="section-body blogCardBody">
-					{{ site.posts[2].content | strip_html | truncatewords: 30 }}
-				</p>    
-			</a>
-		</div>
-	</div>
+	{% endfor %}
 </div>

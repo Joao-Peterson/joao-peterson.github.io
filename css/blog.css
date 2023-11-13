@@ -14,7 +14,7 @@
 
 .blog-posts{
 	background-color: var(--blog-posts-background);
-	padding: 5%;
+	padding: 5ex;
 }
 
 .myposts{
@@ -54,20 +54,28 @@ p.smallDesc{
 
 .default-banner {
 	background-color: var(--blog-banner-background);
-	padding-top: 3%;
-	padding-bottom: 3%;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	box-sizing: border-box;
 }
 
 .default-banner h1{
 	color: var(--blog-banner-text);
 	font-family: 'Lato';
-	font-size: 4vw;
+	font-size: 5vmin;
 	font-weight: 200;
 	
-	word-wrap: break-word;
-	
-	padding-left: 3%;
-	padding-right: 3%;
+	padding-left: 2vh;
+	padding-right: 2vh;
+
+	max-height: 20vh;
+	overflow: auto;
+}
+
+@media only screen and (max-width: 600px), only screen and (max-height: 600px) {
+	.default-banner h1{
+		font-weight: 300;
+	}
 }
 
 .blog-sidebar{
