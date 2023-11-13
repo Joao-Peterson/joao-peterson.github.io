@@ -17,7 +17,9 @@ main.blogMain{
 
 .blogMain article{
 	background-color: var(--blog-posts-background);
-	border-width: 2px;
+	border-width: 0;
+	border-left-width: 2px;
+	border-right-width: 2px;
 	border-style: solid;
 	border-color: var(--blog-banner-background);
 }
@@ -135,4 +137,14 @@ p.smallDesc{
 	border-style: solid;
 	border-width: 0px;
 	border-bottom-width: 1px;
+}
+
+.paginator{
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 1ex;
+}
+
+.paginator *{
+	padding-right: 1ex;
 }

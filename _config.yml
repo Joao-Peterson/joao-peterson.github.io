@@ -58,7 +58,8 @@ defaults:
     values:
       layout: "default"
 
-
+paginate: 15
+paginate_path: "blog/page:num"
 
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -67,6 +68,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 exclude: 
   - design_offline/
