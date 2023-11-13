@@ -34,8 +34,7 @@ article{
 	}
 }
 
-main{
-	padding-bottom: 25px;
+.pageMain{
 	background-color: var(--banner-background);
 }
 
@@ -53,12 +52,7 @@ h1{
 
 h2{
 	font-size: 140%;
-	width: 100vw;
 }
-
-/* p{
-	font-size: 110%;
-} */
 
 ul, li{
 	padding: 0;
@@ -229,6 +223,10 @@ p.banner-title{
 .footer {
 	background-color: var(--banner-background);
 	padding: 10px;
+	border-width: 0;
+	border-top-width: 3.5vh;
+	border-style: solid;
+	border-color: var(--sections-background1);
 }
 
 .footer h3{
@@ -263,6 +261,7 @@ p.banner-title{
 	border-right-style: solid;
 	border-right-color: var(--navbar-font);
 	border-width: 1px;
+	min-width: 45vw;
 }
 
 lite-youtube{

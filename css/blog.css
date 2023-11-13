@@ -11,10 +11,20 @@
 	--blog-sidebar-background: rgb(214, 230, 226);
 }
 
+main.blogMain{
+	background-color: var(--blog-posts-background);
+}
+
+.blogMain article{
+	background-color: var(--blog-posts-background);
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--blog-banner-background);
+}
 
 .blog-posts{
 	background-color: var(--blog-posts-background);
-	padding: 5ex;
+	padding: 5vmin;
 }
 
 .myposts{
