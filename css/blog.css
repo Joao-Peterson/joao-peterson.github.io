@@ -90,23 +90,25 @@ p.smallDesc{
 
 .blog-sidebar{
 	background-color: var(--blog-sidebar-background);
-	padding: 10px;
-	padding-left: 13px;
-	font-size: 1.7vh;
+	padding: 2ex;
+	font-size: 2vmin;
 }
 
 .blog-sidebar ul{
-	padding-left: 10%;
-	padding-bottom: 5%;
-	padding-top: 5%;
+	/* padding-left: 1.5ex;
+	padding-bottom: 1ex;
+	padding-top: 1ex; */
 
 	list-style: none;
 	margin: 0;
 }
 
 .blog-sidebar li{
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding: 1ex;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .blog-sidebar a{
@@ -128,9 +130,9 @@ p.smallDesc{
 	color: var(--post-text);
 	font-family: 300 13px/20px 'Open Sans',sans-serif;
 	font-weight: 400;
-	font-size: 2.1vh;
+	font-size: 2.3vmin;
 
 	border-style: solid;
 	border-width: 0px;
-	border-bottom-width: 2px;
+	border-bottom-width: 1px;
 }

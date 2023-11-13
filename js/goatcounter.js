@@ -7,6 +7,7 @@ for(var views of document.getElementsByName("viewCounter")){
 
 	fetch(goatUrl,{
 		method: "GET",
+		cache: "default",
 		// mode: "no-cors"
 	})
 	.then((res) => res.json())
