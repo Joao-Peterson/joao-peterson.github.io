@@ -23,6 +23,7 @@ katex: true
 - [TypeConverter](#typeconverter)
   - [Observações](#observações-2)
   - [Implementação](#implementação-2)
+- [Melhor solução na minha opinião](#melhor-solução-na-minha-opinião)
 - [Pensamentos finais](#pensamentos-finais)
 - [Referências](#referências)
 
@@ -513,9 +514,106 @@ Caso tenha sido feita a seguinte requisição:
 GET http://server/model?status=lmao
 ```
 
+# Melhor solução na minha opinião
+
+De todos os tipos, o mais fácil seria não fazer nada a respeito e simplesmente deixar que o model binding faça o binding para número inteiro, e que em caso de string, que deixássemos como string e depois convertêssemos para o tipo enum desejado quando necessário, mas entre nós, eu gosto de inventar moda!
+
+Assim, deixo aqui minha solução usando JsonConverter + Classe auxiliar. 
+
+Para o json:
+
+```json
+{
+    "value1": 1,
+    "value2": "status2",
+}
+```
+
+E Modelo:
+
+```c#
+namespace Projeto.Models;
+
+public enum MyEnum{
+    Unknown = -1,
+    Status0 = 0,
+    Status1,
+    Status2
+}
+
+public class MyModel{
+    public required MyEnum value1;
+    public required MyEnum value2;
+}
+```
+
+Vamos anotar o enumerador com o seguinte JsonConverter:
+
+```c#
+[JsonConverter(typeof(MyEnumTypeConverter))]
+public enum MyEnum{
+    Unknown = -1,
+    Status0 = 0,
+    Status1,
+    Status2
+}
+```
+
+Que é dado como:
+
+```c#
+public class MyEnumTypeConverter : JsonConverter<MyEnumType>{
+    public override MyEnumType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+		=> EnumFromStrIntConverter<MyEnumType>.Parse(reader.GetString(), MyEnumType.Unknown);
+
+    public override void Write(Utf8JsonWriter writer, MyEnumType value, JsonSerializerOptions options)
+		=> EnumFromStrIntConverter<OriginModelType>.ToString(value);
+}
+```
+
+Note como diferente do [JsonConverter](#jsonconverter) normal, não utilizamos uma Factory, isso por que mesmo a documentação falando que precisa, eu descobri que funciona sem!
+
+Também note que os métodos de `Read` e `Write` usam métodos de uma classe auxiliar, esta sendo:
+
+`EnumFromStrInt.cs`:
+```c#
+using System.Text.RegularExpressions;
+
+public static class EnumFromStrIntConverter<T> where T : struct, Enum{
+	static public T Parse(string? value, T defaultValue){
+
+		if(value != null){
+			var a = PascalCase(value);
+			if(Enum.TryParse(typeof(T), value, true, out var parsed)){
+				return (T)parsed;
+			}
+			else if(Enum.TryParse(typeof(T), a, true, out var parsedCamel)){
+				return (T)parsedCamel;
+			}
+		}
+
+		return defaultValue;
+	} 
+
+	static public string ToString(T value){
+		return value.ToString();
+	}
+
+	static private string CamelCase(string str){
+		return Regex.Replace(str, "[ _-]([A-Za-z])", m => m.Groups[1].Value.ToUpper());
+	}
+
+	static private string PascalCase(string str){
+		return char.ToUpper(str[0]) + CamelCase(str.Substring(1));
+	}
+} 
+```
+
+Classe auxiliar que provém dois métodos para conversão 'de/para' o enumerador, sendo que para o parsing tenta-se fazer o parsing normal, string e string de número para enum, e o parsing caso o enum tenha valores em PascalCase mas a string de entrada não for. 
+
 # Pensamentos finais
 
-É ainda interessante verificar que para todos os tipos de conversão, podemos anotar um enumerador com nomes exatos para serialização e desserialização, mesmo que tenhamos usado a seguinte conversão de string para enum:
+É ainda interessante verificar que para todos os tipos de conversão, exceto o meu [método próprio](#melhor-solução-na-minha-opinião), podemos anotar um enumerador com nomes exatos para serialização e desserialização, mesmo que tenhamos usado a seguinte conversão de string para enum:
 
 ```c#
 Enum.TryParse(typeof(StatusEnum), valueString, true, out var parsed)
