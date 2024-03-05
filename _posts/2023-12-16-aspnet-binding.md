@@ -650,3 +650,4 @@ E é isso, referências abaixo, para sugestões e conversação, mu e-mail encon
 * [Aspnet core - Model binding](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0)
 * [Aspnet core - Custom Model binding](https://learn.microsoft.com/en-us/aspnet/core/mvc/advanced/custom-model-binding?view=aspnetcore-8.0)
 * [Aspnet core - Json Converter](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/converters-how-to?pivots=dotnet-8-0)
+* [NewtonSoft JSON](https://github.com/TelegramBots/Telegram.Bot/issues/865#issuecomment-580421889)
