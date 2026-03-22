@@ -4,8 +4,8 @@ title:  "Problemas com ventoinhas em 100% no Dell G15 com archlinux depois do ke
 author: [peterson]
 date:   2026-03-21 23:00:00 -0300
 description: "Como diagnostiquei e resolvi o problema de fans girando a 5000 RPM constantemente após atualização do kernel no Dell G15 rodando Arch Linux"
-categories: [linux, hardware, kernel, dell]
-keywords: [linux, hardware, archlinux]
+categories: [linux, hardware, archlinux]
+keywords: [linux, dell, alienware, g15, fan, fan control, kernel, alienware_wmi, dell_smm, hwmon, arch linux]
 published: true
 ---
  
